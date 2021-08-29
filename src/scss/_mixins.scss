@@ -1,0 +1,13 @@
+@import './breakpoints';
+@mixin bg-image($src, $position, $size, $repeat) {
+  background-image: $src;
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+@mixin md {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
