@@ -1,3 +1,8 @@
+@import './colors';
+@import './fonts';
+@import './mixins';
+@import './z-index';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,4 +12,146 @@
 html {
   font-family: 'Quicksand', sans-serif;
   font-size: 62.5%;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include bg-image(url('../images/header.jpeg'), center, cover, no-repeat);
+  color: $grey100;
+
+  &__title {
+    font-size: $fs2;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    @include md {
+      font-size: $fs1;
+    }
+
+    span {
+      color: $blue200;
+    }
+  }
+
+  &__subtitle {
+    font-size: $fs5;
+    text-align: center;
+    font-weight: 500;
+
+    @include md {
+      font-size: $fs3;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $black200;
+  @include z-index(navigation);
+  padding: 2rem;
+
+  @include md {
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    background: transparent;
+    padding: 0;
+  }
+
+  & > a {
+    text-decoration: none;
+    color: $blue200;
+    font-weight: 500;
+    font-size: $fs5;
+    width: max-content;
+  }
+}
+
+.menu {
+  display: none;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem 0;
+  list-style: none;
+
+  @include md {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: unset;
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  &__item {
+    padding: 1.5rem 0;
+    @include md {
+      padding: 0 2rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $grey100;
+    font-size: $fs7;
+
+    &:hover {
+      color: $blue200;
+    }
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 2.2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include md {
+    display: none;
+  }
+
+  &__line {
+    width: 3rem;
+    height: 0.5rem;
+    background-color: $blue200;
+    display: block;
+    margin: 0.5rem auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &--active .hamburger__line:nth-child(2) {
+    opacity: 0;
+  }
+  &--active .hamburger__line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  &--active .hamburger__line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+  }
 }
