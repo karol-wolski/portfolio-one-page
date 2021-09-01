@@ -6,6 +6,12 @@
   background-repeat: $repeat;
 }
 
+@mixin xsd {
+  @media (min-width: #{$x-small}) {
+    @content;
+  }
+}
+
 @mixin sd {
   @media (min-width: #{$small}) {
     @content;
