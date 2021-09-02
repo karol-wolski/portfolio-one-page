@@ -185,15 +185,18 @@ html {
     justify-self: center;
     display: block;
     width: 25rem;
-    @include sd {
+
+    @include xsd {
       width: 28rem;
       grid-column: 1/2;
     }
+
     @include md {
       width: 30rem;
       grid-column: 1/2;
     }
   }
+
   &__title {
     font-size: $fs6;
     @include md {
@@ -206,6 +209,58 @@ html {
     line-height: 1.5;
     @include md {
       grid-column: 2/3;
+    }
+  }
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+
+  @include sd {
+    width: 20rem;
+  }
+
+  @include md {
+    width: 25rem;
+  }
+
+  &__svg {
+    width: 6rem;
+    height: 6rem;
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: $fs7;
+    color: $blue200;
+    padding-bottom: 1.6rem;
+  }
+
+  &__description {
+    font-size: $fs9;
+    text-align: center;
+  }
+
+  &__service {
+    margin: 0 1.5rem;
+
+    .box__svg {
+      transition: transform 1s;
+    }
+
+    &:hover .box__svg {
+      transform: scale(1.5, 1.5);
     }
   }
 }
