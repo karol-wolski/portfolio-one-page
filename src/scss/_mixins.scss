@@ -23,3 +23,9 @@
     @content;
   }
 }
+
+@mixin xld {
+  @media (min-width: #{$x-large}) {
+    @content;
+  }
+}

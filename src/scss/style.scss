@@ -2,6 +2,7 @@
 @import './fonts';
 @import './mixins';
 @import './z-index';
+@import './fa-icons';
 
 * {
   box-sizing: border-box;
@@ -243,8 +244,19 @@ html {
 
   &__title {
     font-size: $fs7;
-    color: $blue200;
     padding-bottom: 1.6rem;
+
+    &--primary {
+      color: $black100;
+    }
+
+    &--secondary {
+      color: $grey100;
+    }
+
+    &--accent {
+      color: $blue200;
+    }
   }
 
   &__description {
@@ -261,6 +273,36 @@ html {
 
     &:hover .box__svg {
       transform: scale(1.5, 1.5);
+    }
+  }
+
+  &__icon-text {
+    width: 15rem;
+
+    @include sd {
+      width: 20rem;
+    }
+
+    @include md {
+      width: 25rem;
+    }
+
+    @include xld {
+      width: 15rem;
+    }
+  }
+
+  &__icon {
+    transition: all 1s ease-in;
+    font-size: 6rem;
+    padding: 2rem;
+
+    &--scale:hover {
+      transform: scale(1.5, 1.5);
+    }
+
+    &--rotate:hover {
+      transform: rotate(15deg);
     }
   }
 }
