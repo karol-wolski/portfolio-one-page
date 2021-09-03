@@ -169,6 +169,24 @@ html {
     font-size: $fs5;
     text-align: center;
     padding: 2rem;
+
+    &--primary {
+      color: $black100;
+    }
+
+    &--secondary {
+      color: $grey100;
+    }
+  }
+
+  &__work-process {
+    @include bg-image(
+      url('../images/work_proces.jpeg'),
+      center,
+      cover,
+      no-repeat
+    );
+    background-attachment: fixed;
   }
 }
 
@@ -296,6 +314,14 @@ html {
     transition: all 1s ease-in;
     font-size: 6rem;
     padding: 2rem;
+
+    &--primary {
+      color: $black100;
+    }
+
+    &--secondary {
+      color: $grey100;
+    }
 
     &--scale:hover {
       transform: scale(1.5, 1.5);
