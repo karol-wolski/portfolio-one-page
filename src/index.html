@@ -236,5 +236,71 @@
         </div>
       </div>
     </section>
+    <section id="portfolio" class="section section__portfolio">
+      <h2 class="section__title">Projects</h2>
+      <div class="portfolio">
+        <ul class="portfolio__filters-list">
+          <li class="portfolio__filters-item">
+            <button
+              class="btn btn--small btn--border btn--border-text-blue"
+              data-filter="*"
+            >
+              All
+            </button>
+          </li>
+          <li class="portfolio__filters-item">
+            <button class="btn btn--small" data-filter="websites">
+              Websites
+            </button>
+          </li>
+          <li class="portfolio__filters-item">
+            <button class="btn btn--small" data-filter="mailings">
+              Mailings
+            </button>
+          </li>
+          <li class="portfolio__filters-item">
+            <button class="btn btn--small" data-filter="spa">SPA</button>
+          </li>
+          <li class="portfolio__filters-item">
+            <button class="btn btn--small" data-filter="landing-pages">
+              Landing Pages
+            </button>
+          </li>
+        </ul>
+        <div class="portfolio__items">
+          <div class="portfolio__item portfolio__item--load-more">
+            <button
+              class="
+                btn btn--medium btn--border btn--border-text-blue btn--slide
+              "
+            >
+              Load more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <template class="portfolio-item-template">
+      <div class="portfolio__item">
+        <img class="portfolio__item-photo" />
+        <div class="portfolio__item-detail">
+          <h3 class="portfolio__item-title"></h3>
+          <p class="portfolio__item-desc"></p>
+          <ul class="portfolio__item-list">
+            <li class="portfolio__item-list-item">
+              <a class="btn btn--small btn--border btn--border-text-grey">
+                Code
+              </a>
+            </li>
+            <li class="portfolio__item-list-item">
+              <a class="btn btn--small btn--border btn--border-text-grey">
+                Live
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

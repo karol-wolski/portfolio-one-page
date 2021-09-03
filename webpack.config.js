@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -22,6 +23,18 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/style.css',
     }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/images/works',
+          to: 'images/works',
+        },
+        {
+          from: 'src/js/projects.json',
+          to: 'js',
+        },
+      ],
+    }),
   ],
 
   module: {
@@ -36,7 +49,10 @@ module.exports = {
         loader: 'babel-loader',
 
         options: {
-          plugins: ['@babel/plugin-syntax-dynamic-import'],
+          plugins: [
+            '@babel/plugin-syntax-dynamic-import',
+            '@babel/plugin-transform-runtime',
+          ],
 
           presets: [
             [
