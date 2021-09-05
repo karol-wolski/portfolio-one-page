@@ -280,6 +280,81 @@
         </div>
       </div>
     </section>
+    <section class="section" id="contact">
+      <div class="wrapper">
+        <h2 class="section__title">Contact</h2>
+        <div class="contact">
+          <p class="contact__description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ullam
+            nemo dicta consequuntur a maiores sint aperiam neque, excepturi ipsa!
+          </p>
+          <ul class="social-media">
+            <li class="social-media__item">
+              <i class="fab fa-github-square fa-3x"></i>
+              <a href="#" class="social-media__link" aria-label="GitHub"
+                >username</a
+              >
+            </li>
+            <li class="social-media__item">
+              <i class="fab fa-linkedin fa-3x"></i>
+              <a href="#" class="social-media__link" aria-label="LinkedIn"
+                >username</a
+              >
+            </li>
+          </ul>
+          <form action="#" class="form-contact">
+            <div class="form-contact__container">
+              <input
+                class="form-contact__field"
+                id="name"
+                name="name"
+                type="text"
+              />
+              <label class="form-contact__label" for="name">Name *</label>
+            </div>
+            <div class="form-contact__container">
+              <input
+                class="form-contact__field"
+                id="email"
+                name="email"
+                type="email"
+              />
+              <label class="form-contact__label" for="email">Email *</label>
+            </div>
+            <div class="form-contact__container">
+              <input
+                class="form-contact__field"
+                id="topic"
+                name="topic"
+                type="text"
+              />
+              <label class="form-contact__label" for="topic">Topic *</label>
+            </div>
+            <div class="form-contact__container">
+              <textarea
+                class="form-contact__field form-contact__field--textarea"
+                cols="30"
+                id="message"
+                name="message"
+                rows="10"
+              ></textarea>
+              <label class="form-contact__label" for="message"
+                >How can I help you?*</label
+              >
+            </div>
+            <button
+              class="
+                btn btn--border btn--border-text-black btn--slide btn--slide-black
+              "
+              id="sendForm"
+              type="submit"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <template class="portfolio-item-template">
       <div class="portfolio__item">
@@ -301,6 +376,10 @@
           </ul>
         </div>
       </div>
+    </template>
+
+    <template class="alert-template">
+      <div class="alert" role="alert"><div>
     </template>
   </body>
 </html>
