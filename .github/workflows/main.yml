@@ -17,6 +17,8 @@ jobs:
         run: |
           npm install
           npm run-script build
+        env:
+        PORTFOLIO_PROJECTS_URL: ${{ secrets.PORTFOLIO_PROJECTS_URL }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3

@@ -58,7 +58,7 @@ const createItem = param => {
 
 const fetchProjects = async () => {
   try {
-    const response = await fetch('/js/projects.json')
+    const response = await fetch(process.env.PORTFOLIO_PROJECTS_URL)
     const json = await response.json()
     return json
   } catch (err) {
