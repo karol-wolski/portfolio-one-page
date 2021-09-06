@@ -36,7 +36,13 @@ module.exports = {
         },
       ],
     }),
-    new Dotenv(),
+    new Dotenv({
+      safe: true,
+      allowEmptyValues: true,
+      systemvars: true,
+      silent: true,
+      defaults: false,
+    }),
   ],
 
   module: {
