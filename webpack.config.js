@@ -36,7 +36,9 @@ module.exports = {
         },
       ],
     }),
-    new Dotenv(),
+    new Dotenv({
+      defaults: true,
+    }),
   ],
 
   module: {
